@@ -3,7 +3,7 @@
 #include <string.h>
 #include "operations.h"
 
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
   int verbose = 1;
   int a;
