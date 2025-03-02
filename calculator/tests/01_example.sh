@@ -29,3 +29,22 @@ if $CALCULATOR 3 @ 2; then  # If the return code of $PROGRAM is zero (i.e. succe
   echo 'ERROR! An invalid run of the application (3 @ 2) apparently succeeded?!'
   exit 1
 fi
+
+### My tests ###
+# Test 04: Ensure that operations with negative numbers have correct output
+if [[ $($CALCULATOR 3 + -2) -ne 1 ]]; then  # If the output of the program is incorrect...
+  echo 'ERROR! A valid run of the application (3 + -2) failed to produce 1 as an output!'
+  exit 1
+fi
+
+# Test 05: Ensure that division has correct output
+if [[ $($CALCULATOR 9 / 3) -ne 3 ]]; then  # If the output of the program is incorrect...
+  echo 'ERROR! A valid run of the application (9 / 3) failed to produce 3 as an output!'
+  exit 1
+fi
+
+# Test 06: Ensure that multiplication has correct output
+if [[ $($CALCULATOR 54 \* 2) -ne 108 ]]; then  # If the output of the program is incorrect...
+  echo 'ERROR! A valid run of the application (54 * 2) failed to produce 108 as an output!'
+  exit 1
+fi
